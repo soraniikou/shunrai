@@ -6,7 +6,7 @@ export default function Shunrai() {
   const [text, setText] = useState("");
   const [stage, setStage] = useState("input");
 
-  const words = ["淋しい", "うそつき", "苦しい", "私をみて", "行かないで"];
+  const words = ["淋しい"];
 
   const handleCleanse = () => {
     if (!text.trim()) return;
@@ -51,7 +51,7 @@ export default function Shunrai() {
           </h1>
 
           <p className="text-sm text-white/70 text-center mb-2">
-            受け取ってしまった痛い言葉を、ここへ...
+            受け取った言葉を、ここへ...
           </p>
 
           <textarea
@@ -119,7 +119,7 @@ export default function Shunrai() {
         >
           <div className="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/20">
             <p className="text-2xl mb-6 leading-relaxed">
-              これはあなたのせいではありません。
+              流したり消したり。
             </p>
             <p className="text-xl mb-8 leading-relaxed text-white/80">
               相手の心の叫びを、ここに置いていきましょう。
