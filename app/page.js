@@ -47,7 +47,7 @@ export default function Shunrai() {
           }}
         >
           <h1 className="text-4xl font-light tracking-widest mb-4">
-            春雷 <span className="text-xl opacity-70">- Shunrai -</span>
+            春来 <span className="text-xl opacity-70">- Shunrai -</span>
           </h1>
 
           <p className="text-sm text-white/70 text-center mb-2">
