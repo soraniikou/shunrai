@@ -15,13 +15,13 @@ useEffect(() => {
       id: Date.now(),
       left: Math.random() * 100,
       duration: 6 + Math.random() * 8,
-      size: 10 + Math.random() * 16,
+      size: 20 + Math.random() * 20,
     };
     setPetals(prev => [...prev, petal]);
     setTimeout(() => {
       setPetals(prev => prev.filter(p => p.id !== petal.id));
     }, 14000);
-  }, 600);
+  }, 300);
   return () => clearInterval(interval);
 }, []);
 
