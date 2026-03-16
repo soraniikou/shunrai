@@ -46,9 +46,10 @@ export default function Shunrai() {
             animation: "fadeIn 1s ease-out",
           }}
         >
-          <h1 className="text-4xl font-light tracking-widest mb-4">
-            春来 <span className="text-xl opacity-70">- Shunrai -</span>
-          </h1>
+          <h1 className="text-4xl font-light tracking-widest mb-4"
+ 　　　　　　 style={{ fontFamily: "'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif" }}>
+　　　 　　　 春来 <span className="text-xl opacity-70">- Shunrai -</span>
+　　　　　　</h1>
 
           <p className="text-sm text-white/70 text-center mb-2">
             受け取った言葉を、ここへ...
