@@ -9,22 +9,15 @@ export default function Shunrai() {
   const words = ["さようなら"];
 　const [petals, setPetals] = useState([]);
 
-useEffect(() => {
-  if (stage !== "final") return;
-  const interval = setInterval(() => {
-    const petal = {
-      id: Date.now(), + Math.random(),
-      left: Math.random() * 100,
-      duration: 6 + Math.random() * 8,
-      size: 20 + Math.random() * 20,
-    };
-    setPetals(prev => [...prev, petal]);
-    setTimeout(() => {
-      setPetals(prev => prev.filter(p => p.id !== petal.id));
-    }, 14000);
-  }, 300);
-  return () => clearInterval(interval);
-}, [stage]);
+const petals = stage === "final" 
+  ? [...Array(20)].map((_, i) => ({
+      id: i,
+      left: (i * 5) % 100,
+      duration: 6 + (i % 4) * 2,
+      delay: i * 0.5,
+      size: 20 + (i % 3) * 10,
+    }))
+  : [];
 
   const handleCleanse = () => {
     if (!text.trim()) return;
