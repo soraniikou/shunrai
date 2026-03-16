@@ -23,7 +23,7 @@ export default function Shunrai() {
   return (
     <div className={`relative flex min-h-screen items-center justify-center transition-all duration-[3000ms] ease-in-out overflow-hidden ${
   stage === "final"
-    ? "bg-gradient-to-br from-lime-900 to-green-700"
+    ? "bg-gradient-to-br from-lime-700 to-green-700"
     : "bg-gradient-to-br from-indigo-950 to-blue-900"
 }`}>
       {/* Floating particles */}
@@ -133,7 +133,7 @@ export default function Shunrai() {
               onClick={reset}
               className="px-8 py-3 rounded-full bg-white/20 hover:bg-white/30 transition-all backdrop-blur-sm border border-white/30"
             >
-              もう一度
+              again
             </button>
           </div>
         </div>
