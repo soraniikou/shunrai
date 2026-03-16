@@ -13,7 +13,7 @@ useEffect(() => {
   if (stage !== "final") return;
   const interval = setInterval(() => {
     const petal = {
-      id: Date.now(),
+      id: Date.now(), + Math.random(),
       left: Math.random() * 100,
       duration: 6 + Math.random() * 8,
       size: 20 + Math.random() * 20,
