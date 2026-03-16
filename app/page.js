@@ -146,7 +146,19 @@ useEffect(() => {
             >
               again
             </button>
-          </div>
+          </div>{shootingStars.map(star => (
+  <div key={star.id} className="absolute pointer-events-none"
+    style={{
+      top: `${star.top}%`,
+      left: "-5%",
+      width: "150px",
+      height: "2px",
+      background: "linear-gradient(to right, transparent, white)",
+      animation: "shootingStar 1.5s ease-out forwards",
+      transform: "rotate(-30deg)",
+    }}
+  />
+))}
         </div>
       )}
 
