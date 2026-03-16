@@ -21,7 +21,7 @@ export default function Shunrai() {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-indigo-950 via-indigo-800 to-purple-900 overflow-hidden text-white">
+    <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-emerald-950 to-teal-800  overflow-hidden text-white">
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
