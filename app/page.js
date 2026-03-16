@@ -6,7 +6,7 @@ export default function Shunrai() {
   const [text, setText] = useState("");
   const [stage, setStage] = useState("input");
 
-  const words = ["淋しい"];
+  const words = ["さようなら"];
 
   const handleCleanse = () => {
     if (!text.trim()) return;
@@ -21,7 +21,11 @@ export default function Shunrai() {
   };
 
   return (
-    <div className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-emerald-950 to-teal-800  overflow-hidden text-white">
+    <div className={`relative flex min-h-screen items-center justify-center transition-all duration-[3000ms] ease-in-out overflow-hidden ${
+  stage === "final"
+    ? "bg-gradient-to-br from-lime-900 to-green-700"
+    : "bg-gradient-to-br from-indigo-950 to-blue-900"
+}`}>
       {/* Floating particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
@@ -120,7 +124,7 @@ export default function Shunrai() {
         >
           <div className="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/20">
             <p className="text-2xl mb-6 leading-relaxed">
-              流したり消したり。
+              流してみたり　消してみたり
             </p>
             <p className="text-xl mb-8 leading-relaxed text-white/80">
               相手の心の叫びを、ここに置いていきましょう。
