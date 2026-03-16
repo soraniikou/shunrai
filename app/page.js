@@ -7,7 +7,18 @@ export default function Shunrai() {
   const [stage, setStage] = useState("input");
 
   const words = ["さようなら"];
+　const [shootingStars, setShootingStars] = useState([]);
 
+useEffect(() => {
+  const interval = setInterval(() => {
+    const star = { id: Date.now(), top: Math.random() * 60 };
+    setShootingStars(prev => [...prev, star]);
+    setTimeout(() => {
+      setShootingStars(prev => prev.filter(s => s.id !== star.id));
+    }, 1500);
+  }, 15000);
+  return () => clearInterval(interval);
+}, []);
   const handleCleanse = () => {
     if (!text.trim()) return;
     setStage("cleansing");
