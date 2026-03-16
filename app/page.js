@@ -198,6 +198,12 @@ useEffect(() => {
             opacity: 0.5;
           }
         }
+        @keyframes petalFall {
+  0% { top: -30px; opacity: 0; transform: rotate(0deg); }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.6; }
+  100% { top: 105vh; opacity: 0; transform: rotate(720deg) translateX(60px); }
+}
       `}</style>
     </div>
   );
