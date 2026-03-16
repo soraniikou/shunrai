@@ -155,15 +155,16 @@ useEffect(() => {
             </button>
           </div>
                  {petals.map(petal => (
-  <div key={petal.id} className="absolute pointer-events-none"
-    style={{
-      left: `${petal.left}%`,
-      top: "-20px",
-      fontSize: `${petal.size}px`,
-      animation: `petalFall ${petal.duration}s linear forwards`,
-    }}
-  style={{ filter: "opacity(0.7) sepia(1) saturate(3) hue-rotate(300deg)" }}
-  >🌸</div>
+<div key={petal.id} className="absolute pointer-events-none"
+  style={{
+    left: `${petal.left}%`,
+    top: "-20px",
+    fontSize: `${petal.size}px`,
+    animation: `petalFall ${petal.duration}s linear forwards`,
+    filter: "opacity(0.7) sepia(1) saturate(3) hue-rotate(300deg)",
+    zIndex: 50,
+  }}
+>🌸</div>
 ))}
         </div>
       )}
