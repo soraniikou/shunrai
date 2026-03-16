@@ -161,6 +161,7 @@ useEffect(() => {
       fontSize: `${petal.size}px`,
       animation: `petalFall ${petal.duration}s linear forwards`,
     }}
+  style={{ filter: "opacity(0.7) sepia(1) saturate(3) hue-rotate(300deg)" }}
   >🌸</div>
 ))}
         </div>
