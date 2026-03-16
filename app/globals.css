@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes shootingStar {
+  from { left: -5%; opacity: 1; }
+  to { left: 110%; opacity: 0; }
+}
