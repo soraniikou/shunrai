@@ -50,7 +50,7 @@ export default function Shunrai() {
             animation: "fadeIn 1s ease-out",
           }}
         >
-          <h1 className="text-4xl font-light tracking-widest mb-4"
+          <h1 className="text-4xl font-light tracking-widest mb-4 text-white"
  　　　　　　 style={{ fontFamily: "'Hiragino Mincho ProN', 'Yu Mincho', 'Noto Serif JP', serif" }}>
 　　　 　　　 春来 <span className="text-xl opacity-70">- Shunrai -</span>
 　　　　　　</h1>
