@@ -133,7 +133,7 @@ useEffect(() => {
             animation: "fadeIn 2s ease-out",
           }}
         >
-          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-10 border border-white/20">
+          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20">
             <p className="text-2xl mb-6 leading-relaxed">
               流してみたり　消してみたり
             </p>
