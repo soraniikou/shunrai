@@ -146,8 +146,9 @@ useEffect(() => {
             >
               again
             </button>
-          </div>{shootingStars.map(star => (
-  <div key={star.id} className="absolute pointer-events-none"
+          </div>
+                 {shootingStars.map(star => (
+   <div key={star.id} className="absolute pointer-events-none"
     style={{
       top: `${star.top}%`,
       left: "-5%",
