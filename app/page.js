@@ -24,7 +24,7 @@ useEffect(() => {
     }, 14000);
   }, 300);
   return () => clearInterval(interval);
-}, []);
+}, [stage]);
 
   const handleCleanse = () => {
     if (!text.trim()) return;
