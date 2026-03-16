@@ -11,14 +11,20 @@ export default function Shunrai() {
 
 useEffect(() => {
   const interval = setInterval(() => {
-    const star = { id: Date.now(), top: Math.random() * 60 };
-    setShootingStars(prev => [...prev, star]);
+    const petal = {
+      id: Date.now(),
+      left: Math.random() * 100,
+      duration: 3 + Math.random() * 4,
+      size: 10 + Math.random() * 16,
+    };
+    setPetals(prev => [...prev, petal]);
     setTimeout(() => {
-      setShootingStars(prev => prev.filter(s => s.id !== star.id));
-    }, 1500);
-  }, 15000);
+      setPetals(prev => prev.filter(p => p.id !== petal.id));
+    }, 7000);
+  }, 600);
   return () => clearInterval(interval);
 }, []);
+
   const handleCleanse = () => {
     if (!text.trim()) return;
     setStage("cleansing");
@@ -147,18 +153,15 @@ useEffect(() => {
               again
             </button>
           </div>
-                 {shootingStars.map(star => (
-   <div key={star.id} className="absolute pointer-events-none"
+                 {petals.map(petal => (
+  <div key={petal.id} className="absolute pointer-events-none"
     style={{
-      top: `${star.top}%`,
-      left: "-5%",
-      width: "150px",
-      height: "2px",
-      background: "linear-gradient(to right, transparent, white)",
-      animation: "shootingStar 1.5s ease-out forwards",
-      transform: "rotate(-30deg)",
+      left: `${petal.left}%`,
+      top: "-20px",
+      fontSize: `${petal.size}px`,
+      animation: `petalFall ${petal.duration}s linear forwards`,
     }}
-  />
+  >🌸</div>
 ))}
         </div>
       )}
