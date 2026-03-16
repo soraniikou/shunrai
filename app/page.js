@@ -14,7 +14,7 @@ useEffect(() => {
     const petal = {
       id: Date.now(),
       left: Math.random() * 100,
-      duration: 3 + Math.random() * 4,
+      duration: 6 + Math.random() * 8,
       size: 10 + Math.random() * 16,
     };
     setPetals(prev => [...prev, petal]);
