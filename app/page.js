@@ -20,7 +20,7 @@ useEffect(() => {
     setPetals(prev => [...prev, petal]);
     setTimeout(() => {
       setPetals(prev => prev.filter(p => p.id !== petal.id));
-    }, 7000);
+    }, 14000);
   }, 600);
   return () => clearInterval(interval);
 }, []);
