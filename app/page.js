@@ -7,7 +7,7 @@ export default function Shunrai() {
   const [stage, setStage] = useState("input");
 
   const words = ["さようなら"];
-　const [shootingStars, setShootingStars] = useState([]);
+　const [petals, setPetals] = useState([]);
 
 useEffect(() => {
   const interval = setInterval(() => {
