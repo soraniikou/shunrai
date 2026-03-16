@@ -10,6 +10,7 @@ export default function Shunrai() {
 　const [petals, setPetals] = useState([]);
 
 useEffect(() => {
+  if (stage !== "final") return;
   const interval = setInterval(() => {
     const petal = {
       id: Date.now(),
